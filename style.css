@@ -1,1 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #ffffff;
+    color: #333;
+}
+
+header {
+    background: #4caac9;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: #eaf7fb;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    background: #4caac9;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.about,
+.features,
+.news {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.feature-card {
+    background: #f7f7f7;
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 5px solid #4caac9;
+}
+
+footer {
+    background: #4caac9;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
