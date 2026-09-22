@@ -1,17 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trikuta Deep High School</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trikuta Deep High School</title>
 
-    <link rel="stylesheet" href="style.css">
+<style>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display>
+/* ===================================
+   GLOBAL
+=================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#ffffff;
+    color:#333;
+}
+
+/* ===================================
+   HEADER
+=================================== */
+
+.top-header{
+    background:#ffffff;
+    min-height:260px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:40px 50px;
+}
+
+.header-container{
+    width:100%;
+    max-width:1400px;
+    display:flex;
+    align-items:center;
+}
+
+.logo-area{
+    width:220px;
+    display:flex;
+    justify-content:center;
+}
+
+.logo-placeholder{
+    width:150px;
+    height:150px;
+    border:4px solid #4caac9;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#4caac9;
+    font-weight:bold;
+    font-size:22px;
+}
+
+.school-info{
+    flex:1;
+    text-align:center;
+    padding-right:220px;
+}
+
+.school-info h1{
+    color:#4caac9;
+    font-size:56px;
+    margin-bottom:10px;
+}
+
+.school-info p{
+    font-size:24px;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+.school-info span{
+    font-size:18px;
+    color:#777;
+}
+
+/* ===================================
+   NAVIGATION
+=================================== */
+
+.navbar{
+    background:#4caac9;
+    text-align:center;
+    padding:18px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+    font-size:16px;
+}
+
+.navbar a:hover{
+    text-decoration:underline;
+}
+
+/* ===================================
+   HERO SECTION
+=================================== */
+
+.hero{
+    height:75vh;
+    background:linear-gradient(
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.55)
+    ),
+    url('https://images.unsplash.com/photo-1509062522246-3755977927d7');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    color:white;
+    padding:20px;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.hero-content h2{
+    font-size:58px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:22px;
+    margin-bottom:35px;
+}
+
+.btn{
+    display:inline-block;
+    background:#4caac9;
+    color:white;
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:50px;
+    font-weight:bold;
+}
+
+/* ===================================
+   WELCOME
+=================================== */
+
+.welcome{
+    padding:80px 10%;
+    text-align:center;
+}
+
+.welcome h2{
+    color:#4caac9;
+    font-size:38px;
+    margin-bottom:20px;
+}
+
+.welcome p{
+    max-width:900px;
+    margin:auto;
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* ===================================
+   FEATURES
+=================================== */
+
+.features{
+    padding:80px 10%;
+}
+
+.features h2{
+    text-align:center;
+    color:#4caac9;
+    margin-bottom:40px;
+    font-size:38px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    color:#4caac9;
+    margin-bottom:15px;
+}
+
+/* ===================================
+   STATS
+=================================== */
+
+.stats{
+    background:#4caac9;
+    color:white;
+    display:flex;
+    justify-content:center;
+    gap:100px;
+    padding:70px;
+    text-align:center;
+}
+
+.stats h3{
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+/* ===================================
+   FOOTER
+=================================== */
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:40px;
+}
+
+footer h3{
+    margin-bottom:10px;
+}
+
+/* ===================================
+   MOBILE
+=================================== */
+
+@media(max-width:768px){
+
+    .header-container{
+        flex-direction:column;
+    }
+
+    .school-info{
+        padding-right:0;
+        margin-top:20px;
+    }
+
+    .school-info h1{
+        font-size:34px;
+    }
+
+    .school-info p{
+        font-size:18px;
+    }
+
+    .navbar a{
+        display:inline-block;
+        margin:8px;
+    }
+
+    .hero-content h2{
+        font-size:34px;
+    }
+
+    .stats{
+        flex-direction:column;
+        gap:30px;
+    }
+}
+
+</style>
+</head>
+
 <body>
 
-    <!-- Top Header -->
-    <header class="top-header">
+<header class="top-header">
+
+    <div class="header-container">
 
         <div class="logo-area">
             <div class="logo-placeholder">
@@ -25,143 +311,105 @@
             <span>Learning Today • Leading Tomorrow</span>
         </div>
 
-    </header>
+    </div>
 
-    <!-- Navigation -->
+</header>
 
-    <nav class="navbar">
+<nav class="navbar">
 
-        #Home</a>
-        #Admissions</a>
-        #About Our School</a>
-        #Academics</a>
-        <a href="#">Gallery  #News & Events</a>
-        #Contact</a>
+    #Home</a>
+    #Admissions</a>
+    <about</a>
+    #Academics</a>
+    #Gallery</a>
+    <a href="#">News & Events</a>
+t</a>
 
-    </nav>
+</nav>
 
-    <!-- Hero Section -->
+<section class="hero">
 
-    <section class="hero">
+    <div class="hero-content">
 
-        <div class="hero-content">
-
-            <h2>Empowering Young Minds for a Brighter Future</h2>
-
-            <p>
-                Providing quality education, character development,
-                creativity, and leadership opportunities for every student.
-            </p>
-
-            <div class="hero-buttons">
-                #Admissions Open</a>
-                #Learn More</a>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Welcome -->
-
-    <section class="welcome">
-
-        <h2>Welcome to Trikuta Deep High School</h2>
+        <h2>Empowering Young Minds for a Brighter Future</h2>
 
         <p>
-            We are committed to academic excellence, personal growth,
-            discipline, and nurturing future leaders in a safe and
-            inspiring learning environment.
+            Providing quality education, leadership, creativity and
+            academic excellence for every student.
         </p>
 
-    </section>
+        #Admissions Open</a>
 
-    <!-- Features -->
+    </div>
 
-    <section class="features">
+</section>
 
-        <h2>Why Choose Us?</h2>
+<section class="welcome">
 
-        <div class="cards">
+    <h2>Welcome to Trikuta Deep High School</h2>
 
-            <div class="card">
-                <h3>Qualified Teachers</h3>
-                <p>Dedicated educators helping students reach their full potential.</p>
-            </div>
+    <p>
+        We provide quality primary and secondary education in a safe,
+        supportive and inspiring environment where every child is
+        encouraged to achieve their full potential.
+    </p>
 
-            <div class="card">
-                <h3>Modern Learning</h3>
-                <p>Technology-supported learning for today's students.</p>
-            </div>
+</section>
 
-            <div class="card">
-                <h3>Sports & Activities</h3>
-                <p>Balanced development through academics and extracurriculars.</p>
-            </div>
+<section class="features">
 
+    <h2>Why Choose Us?</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Qualified Teachers</h3>
+            <p>Experienced educators dedicated to student success.</p>
         </div>
 
-    </section>
-
-    <!-- Stats -->
-
-    <section class="stats">
-
-        <div>
-            <h3>500+</h3>
-            <p>Students</p>
+        <div class="card">
+            <h3>Modern Learning</h3>
+            <p>Technology-supported classrooms and innovative teaching methods.</p>
         </div>
 
-        <div>
-            <h3>40+</h3>
-            <p>Teachers</p>
+        <div class="card">
+            <h3>Sports & Activities</h3>
+            <p>Holistic development through sports and extracurricular activities.</p>
         </div>
 
-        <div>
-            <h3>20+</h3>
-            <p>Years Excellence</p>
-        </div>
+    </div>
 
-    </section>
+</section>
 
-    <!-- News -->
+<section class="stats">
 
-    <section class="news">
+    <div>
+        <h3>500+</h3>
+        <p>Students</p>
+    </div>
 
-        <h2>Latest News & Events</h2>
+    <div>
+        <h3>40+</h3>
+        <p>Teachers</p>
+    </div>
 
-        <div class="cards">
+    <div>
+        <h3>20+</h3>
+        <p>Years Excellence</p>
+    </div>
 
-            <div class="card">
-                <h3>Admissions Open</h3>
-                <p>Applications are now open for the new academic session.</p>
-            </div>
+</section>
 
-            <div class="card">
-                <h3>Annual Sports Day</h3>
-                <p>Students participate in exciting competitions and activities.</p>
-            </div>
+<footer>
 
-            <div class="card">
-                <h3>Science Exhibition</h3>
-                <p>Young innovators showcase their creative projects.</p>
-            </div>
+    <h3>Trikuta Deep High School</h3>
 
-        </div>
+    <p>Learning Today • Leading Tomorrow</p>
 
-    </section>
+    <p>© 2026 All Rights Reserved</p>
 
-    <!-- Footer -->
-
-    <footer>
-
-        <h3>Trikuta Deep High School</h3>
-
-        <p>Learning Today • Leading Tomorrow</p>
-
-        <p>© 2026 All Rights Reserved</p>
-
-    </footer>
+</footer>
 
 </body>
 </html>
+``
