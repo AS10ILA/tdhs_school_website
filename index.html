@@ -159,25 +159,157 @@ body{
 }
 
 /* ===================================
-   WELCOME
+   WELCOME + NOTICEBOARD
 =================================== */
 
-.welcome{
-    padding:80px 10%;
-    text-align:center;
+.welcome-section{
+    padding:60px 8%;
+    display:flex;
+    gap:30px;
+    background:#ffffff;
 }
 
-.welcome h2{
+.welcome-card,
+.noticeboard-card{
+    flex:1;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.welcome-card h2,
+.noticeboard-card h2{
     color:#4caac9;
-    font-size:38px;
     margin-bottom:20px;
 }
 
-.welcome p{
-    max-width:900px;
-    margin:auto;
-    font-size:18px;
+.welcome-card p{
     line-height:1.8;
+}
+
+/* NOTICEBOARD */
+
+.noticeboard-scroll{
+    height:300px;
+    overflow:hidden;
+}
+
+.noticeboard-content{
+    animation:newsScroll 18s linear infinite;
+}
+
+.noticeboard-scroll:hover .noticeboard-content{
+    animation-play-state:paused;
+}
+
+.news-item{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    text-decoration:none;
+    color:#333;
+    padding:12px;
+    margin-bottom:12px;
+    border-radius:12px;
+    transition:0.3s;
+}
+
+.news-item:hover{
+    background:#eef8fb;
+    transform:translateX(5px);
+}
+
+/* DATE BOX */
+
+.news-date{
+    width:65px;
+    min-width:65px;
+    background:#4caac9;
+    color:white;
+    text-align:center;
+    border-radius:10px;
+    padding:8px;
+}
+
+.news-date .day{
+    display:block;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.news-date .month{
+    display:block;
+    font-size:12px;
+    letter-spacing:1px;
+}
+
+/* TEXT */
+
+.news-text h4{
+    margin:0;
+    color:#4caac9;
+}
+
+.news-text p{
+    margin-top:5px;
+    margin-bottom:0;
+    font-size:14px;
+    line-height:1.5;
+}
+
+/* READ MORE BUTTON */
+
+.read-more-btn{
+    display:inline-block;
+    margin-top:20px;
+    background:#4caac9;
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+.read-more-btn:hover{
+    opacity:0.9;
+}
+
+/* AUTO SCROLL */
+
+@keyframes newsScroll{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    100%{
+        transform:translateY(-40%);
+    }
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .welcome-section{
+        flex-direction:column;
+    }
+
+    .noticeboard-scroll{
+        height:250px;
+    }
+
+    .news-date{
+        width:55px;
+        min-width:55px;
+    }
+
+    .news-date .day{
+        font-size:20px;
+    }
+
 }
 
 /* ===================================
@@ -442,15 +574,93 @@ footer h3{
 
 </section>
 
-<section class="welcome">
+<section class="welcome-section">
 
-    <h2>Welcome to Trikuta Deep High School</h2>
+    <div class="welcome-card">
 
-    <p>
-        We provide quality primary and secondary education in a safe,
-        supportive and inspiring environment where every child is
-        encouraged to achieve their full potential.
-    </p>
+        <h2>Welcome to Trikuta Deep High School</h2>
+
+        <p>
+            We provide quality primary and secondary education in a safe,
+            supportive and inspiring environment where every child is
+            encouraged to achieve their full potential.
+        </p>
+
+    </div>
+
+    <div class="noticeboard-card">
+
+        <h2>Noticeboard</h2>
+
+        <div class="noticeboard-scroll">
+
+            <div class="noticeboard-content">
+
+                news.html
+
+                    <div class="news-date">
+                        <span class="day">15</span>
+                        <span class="month">SEP</span>
+                    </div>
+
+                    <div class="news-text">
+                        <h4>Admissions Open</h4>
+                        <p>Applications for Academic Session 2027 are now open.</p>
+                    </div>
+
+                </a>
+
+                news.html
+
+                    <div class="news-date">
+                        <span class="day">21</span>
+                        <span class="month">OCT</span>
+                    </div>
+
+                    <div class="news-text">
+                        <h4>Annual Sports Day</h4>
+                        <p>Registration for all events is now open.</p>
+                    </div>
+
+                </a>
+
+                news.html
+
+                    <div class="news-date">
+                        <span class="day">05</span>
+                        <span class="month">NOV</span>
+                    </div>
+
+                    <div class="news-text">
+                        <h4>Science Exhibition</h4>
+                        <p>Students will showcase innovative projects.</p>
+                    </div>
+
+                </a>
+
+                news.html
+
+                    <div class="news-date">
+                        <span class="day">10</span>
+                        <span class="month">DEC</span>
+                    </div>
+
+                    <div class="news-text">
+                        <h4>Parent Teacher Meeting</h4>
+                        <p>Meeting with teachers scheduled this Saturday.</p>
+                    </div>
+
+                </a>
+
+            </div>
+
+        </div>
+
+        news.html
+            Read More...
+        </a>
+
+    </div>
 
 </section>
 
