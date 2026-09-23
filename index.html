@@ -173,17 +173,20 @@ body{
 .welcome-section{
     padding:60px 8%;
     display:flex;
-    gap:30px;
+    gap:50px;
     background:#ffffff;
+    align-items:flex-start;
 }
 
-.welcome-card,
+.welcome-card{
+    flex:2;
+    padding:20px;
+}
+
 .noticeboard-card{
     flex:1;
-    background:white;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    padding:20px;
+    border-left:4px solid #4caac9;
 }
 
 .welcome-card h2,
@@ -196,7 +199,20 @@ body{
     line-height:1.8;
 }
 
+.welcome-card h2{
+    color:#4caac9;
+    margin-bottom:20px;
+    font-size:36px;
+}
+
 /* NOTICEBOARD */
+
+.noticeboard-card h2{
+    color:#4caac9;
+    margin-bottom:20px;
+    font-size:32px;
+    text-align:center;
+}
 
 .noticeboard-scroll{
     height:300px;
@@ -292,7 +308,7 @@ body{
     }
 
     100%{
-        transform:translateY(-40%);
+        transform:translateY(-50%);
     }
 
 }
@@ -561,24 +577,11 @@ footer h3{
     <a href="#">Academics</a>
     <a href="#">Gallery</a>
     <a href="#">News & Events</a>
-    <a href="#">Contact</a>
-
+    <a href="#">Work With Us</a>
+    
 </nav>
 
 <section class="hero">
-
-    <div class="hero-content">
-
-        <h2>Empowering Young Minds for a Brighter Future</h2>
-
-        <p>
-            Providing quality education, leadership, creativity and
-            academic excellence for every student.
-        </p>
-
-        <a href="#">Admissions Open</a>
-
-    </div>
 
 </section>
 
