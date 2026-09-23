@@ -225,14 +225,42 @@ body{
 .stats{
     background:#4caac9;
     color:white;
-    display:flex;
-    justify-content:center;
-    gap:100px;
-    padding:70px;
+    padding:70px 8%;
     text-align:center;
 }
 
-.stats h3{
+.stats h2{
+    margin-bottom:40px;
+    font-size:38px;
+}
+
+.stats .cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    margin-bottom:60px;
+}
+
+.stats .card{
+    background:rgba(255,255,255,0.15);
+    padding:25px;
+    border-radius:15px;
+    backdrop-filter:blur(5px);
+}
+
+.stats .card h3{
+    color:white;
+    margin-bottom:10px;
+}
+
+.stats-numbers{
+    display:flex;
+    justify-content:center;
+    gap:100px;
+    flex-wrap:wrap;
+}
+
+.stats-numbers h3{
     font-size:48px;
     margin-bottom:10px;
 }
@@ -300,6 +328,10 @@ body{
     .map-container iframe{
        height:300px;
     }
+
+    .stats-numbers{
+       gap:30px;
+}
 
 }
 
@@ -404,7 +436,7 @@ footer h3{
             academic excellence for every student.
         </p>
 
-        #Admissions Open</a>
+        <a href="#">Admissions Open</a>
 
     </div>
 
@@ -422,7 +454,7 @@ footer h3{
 
 </section>
 
-<section class="features">
+<section class="stats">
 
     <h2>Why Choose Us?</h2>
 
@@ -445,23 +477,23 @@ footer h3{
 
     </div>
 
-</section>
+    <div class="stats-numbers">
 
-<section class="stats">
+        <div>
+            <h3>500+</h3>
+            <p>Students</p>
+        </div>
 
-    <div>
-        <h3>500+</h3>
-        <p>Students</p>
-    </div>
+        <div>
+            <h3>40+</h3>
+            <p>Teachers</p>
+        </div>
 
-    <div>
-        <h3>40+</h3>
-        <p>Teachers</p>
-    </div>
+        <div>
+            <h3>20+</h3>
+            <p>Years Excellence</p>
+        </div>
 
-    <div>
-        <h3>20+</h3>
-        <p>Years Excellence</p>
     </div>
 
 </section>
