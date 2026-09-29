@@ -156,10 +156,13 @@ body{
     background:#283655;
     color:#F0E5D3;
     padding:18px 25px;
-    text-align:left;
     font-size:18px;
     font-weight:bold;
     cursor:pointer;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
 .vacancy-toggle:hover{
@@ -313,7 +316,8 @@ footer h3{
 
     <div class="vacancy-item">
         <button class="vacancy-toggle">
-            Mathematics Teacher ▼
+           <span>Mathematics Teacher</span>
+           <span class="arrow">▼</span>
         </button>
         <div class="vacancy-content">
             <p><strong>Qualification:</strong> Graduate / Post Graduate with B.Ed.</p>
@@ -335,7 +339,7 @@ footer h3{
         <div class="vacancy-content">
             <p><strong>Qualification:</strong> Graduate / Post Graduate with B.Ed.</p>
             <p><strong>Experience:</strong> Minimum 2 Years preferred.</p>
-            <p><strong>Location:</strong> Jammu</p>
+            <p><strong>Location:</strong> Old Janipur, Jammu</p>
             <p>
                 We are looking for a dedicated Science Teacher with strong subject knowledge and teaching skills.
             </p>
@@ -346,7 +350,6 @@ footer h3{
     </div>
 
 </section>
-
 
 <footer>
 
@@ -365,16 +368,17 @@ document.querySelectorAll(".vacancy-toggle").forEach(button => {
     button.addEventListener("click", function() {
 
         const content = this.nextElementSibling;
+        const arrow = this.querySelector(".arrow");
 
         if(content.style.display === "block"){
 
             content.style.display = "none";
-            this.innerHTML = this.innerHTML.replace("▲", "▼");
+            arrow.textContent = "▼";
 
         }else{
 
             content.style.display = "block";
-            this.innerHTML = this.innerHTML.replace("▼", "▲");
+            arrow.textContent = "▲";
 
         }
 
