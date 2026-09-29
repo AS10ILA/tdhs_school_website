@@ -1,1 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trikuta Deep High School</title>
 
+<style>
+
+/* ===================================
+   GLOBAL
+=================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#ffffff;
+    color:#333;
+}
+
+/* ===================================
+   HEADER
+=================================== */
+
+.top-header{
+    background:#ffffff;
+    min-height:260px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:40px 50px;
+}
+
+.header-container{
+    width:100%;
+    max-width:1400px;
+    display:flex;
+    align-items:center;
+}
+
+.logo-area{
+    width:220px;
+    display:flex;
+    justify-content:center;
+}
+
+.school-logo{
+    width:250px;
+    height:250px;
+    object-fit:contain;
+}
+
+.school-info{
+    flex:1;
+    text-align:center;
+    padding-right:220px;
+}
+
+.school-info h1{
+    color:#283655;
+    font-size:56px;
+    margin-bottom:10px;
+}
+
+.school-info p{
+    font-size:24px;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+.school-info span{
+    font-size:18px;
+    color:#777;
+}
+
+.school-motto{
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 24px;
+    color: #283655;
+    font-weight: 600;
+}
+
+/* ===================================
+   NAVIGATION
+=================================== */
+
+.navbar{
+    background:#283655;
+    text-align:center;
+    padding:18px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.navbar a{
+    color:#F0E5D3;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+    font-size:16px;
+}
+
+.navbar a:hover{
+    text-decoration:underline;
+}
+
+/* ===================================
+   CAREERS PAGE
+=================================== */
+
+.careers-intro{
+    padding:60px 8%;
+    background:#ffffff;
+}
+
+.careers-intro h2{
+    color:#283655;
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.careers-intro p{
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.vacancies{
+    padding:60px 8%;
+    background:#f8f9fa;
+}
+
+.vacancies h2{
+    color:#283655;
+    font-size:40px;
+    margin-bottom:30px;
+}
+
+.vacancy-item{
+    background:white;
+    border-radius:10px;
+    margin-bottom:15px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.vacancy-toggle{
+    width:100%;
+    border:none;
+    background:#283655;
+    color:#F0E5D3;
+    padding:18px 25px;
+    text-align:left;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.vacancy-toggle:hover{
+    background:#1f2a42;
+}
+
+.vacancy-content{
+    display:none;
+    padding:25px;
+    line-height:1.8;
+}
+
+.apply-btn{
+    display:inline-block;
+    margin-top:15px;
+    background:#283655;
+    color:#F0E5D3;
+    text-decoration:none;
+    padding:12px 24px;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+.apply-btn:hover{
+    opacity:0.9;
+}
+
+.no-vacancy{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    text-align:center;
+    font-size:18px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+@media(max-width:768px){
+
+    .careers-intro h2,
+    .vacancies h2{
+        font-size:30px;
+    }
+
+}
+
+/* ===================================
+   FOOTER
+=================================== */
+
+footer{
+    background:#283655;
+    color:#F0E5D3;
+    text-align:center;
+    padding:40px;
+}
+
+footer h3{
+    margin-bottom:10px;
+}
+
+/* ===================================
+   MOBILE
+=================================== */
+
+@media(max-width:768px){
+
+    .header-container{
+        flex-direction:column;
+    }
+
+    .school-info{
+        padding-right:0;
+        margin-top:20px;
+    }
+
+    .school-info h1{
+        font-size:34px;
+    }
+
+    .school-info p{
+        font-size:18px;
+    }
+
+    .navbar a{
+        display:inline-block;
+        margin:8px;
+    }
+
+    .hero-content h2{
+        font-size:34px;
+    }
+
+    .stats{
+        flex-direction:column;
+        gap:30px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="top-header">
+
+    <div class="header-container">
+
+        <div class="logo-area">
+            <img class="school-logo" src="images/tdhslogo.jpg">
+        </div>
+
+        <div class="school-info">
+            <h1>TRIKUTA DEEP HIGH SCHOOL</h1>
+            <p>Primary & Secondary Education</p>
+            <span class="school-motto">सत्यमेव जयते</span>
+        </div>
+
+    </div>
+
+</header>
+
+<nav class="navbar">
+
+    <a href="index.html">Home</a>
+    <a href="#">Admissions</a>
+    <a href="#">About</a>
+    <a href="#">Academics</a>
+    <a href="#">Gallery</a>
+    <a href="#">News & Events</a>
+    <a href="#">Careers</a>
+    
+</nav>
+
+<section class="careers-intro">
+
+    <h2>Why Work With Us?</h2>
+
+    <p>
+        At Trikuta Deep High School, we believe that teachers and staff play a vital role in shaping the future of our students. We provide a supportive and collaborative work environment where dedication, innovation and professional growth are valued.
+    </p>
+
+    <p>
+        Our school encourages continuous learning, teamwork and excellence in education. We are committed to providing opportunities for personal and professional development while fostering a culture of respect, integrity and academic achievement.
+    </p>
+
+</section>
+
+<section class="vacancies">
+
+    <h2>Current Vacancies</h2>
+
+    <div class="vacancy-item">
+        <button class="vacancy-toggle">
+            Mathematics Teacher ▼
+        </button>
+        <div class="vacancy-content">
+            <p><strong>Qualification:</strong> Graduate / Post Graduate with B.Ed.</p>
+            <p><strong>Experience:</strong> Minimum 2 Years preferred.</p>
+            <p><strong>Location:</strong> Old Janipur, Jammu</p>
+            <p>
+                We are seeking a passionate Mathematics Teacher to inspire students and contribute to academic excellence.
+            </p>
+            <a href="#" class="apply-btn">
+                Apply Now
+            </a>
+        </div>
+    </div>
+
+    <div class="vacancy-item">
+        <button class="vacancy-toggle">
+            Science Teacher ▼
+        </button>
+        <div class="vacancy-content">
+            <p><strong>Qualification:</strong> Graduate / Post Graduate with B.Ed.</p>
+            <p><strong>Experience:</strong> Minimum 2 Years preferred.</p>
+            <p><strong>Location:</strong> Jammu</p>
+            <p>
+                We are looking for a dedicated Science Teacher with strong subject knowledge and teaching skills.
+            </p>
+            <a href="#" class="apply-btn">
+                Apply Now
+            </a>
+        </div>
+    </div>
+
+</section>
+
+
+<footer>
+
+    <h3>Trikuta Deep High School</h3>
+
+    <p>Learning Today • Leading Tomorrow</p>
+
+    <p>© 2026 All Rights Reserved</p>
+
+</footer>
+
+</body>
+</html>
